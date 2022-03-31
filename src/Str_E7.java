@@ -1,0 +1,33 @@
+
+import java.util.Scanner;
+
+public class Str_E7 {
+	private static Scanner s;
+	static String replaceSpaces(String L) 
+	{
+		String s="";
+		for(int i=0;i<L.length();i++) 
+		{
+			if(L.charAt(i)=='a'||L.charAt(i)=='e'||L.charAt(i)=='i'||
+			  L.charAt(i)=='o'||L.charAt(i)=='u') 
+			{	
+				s+="ABC";
+				
+			}
+			else if(L.charAt(i)>='a'&&L.charAt(i)<='z')
+				s+=L.charAt(i);	
+			else if(L.charAt(i)>='A'&&L.charAt(i)<='Z')
+				s+=L.charAt(i);	
+			
+		}
+		return s;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Enter String to check");
+		s = new Scanner(System.in);
+		String L=s.nextLine();
+		System.out.println(replaceSpaces(L));
+		
+	}
+}
